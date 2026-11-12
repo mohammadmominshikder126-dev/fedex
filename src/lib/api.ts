@@ -1,3 +1,4 @@
+import { handleLocalApi } from './localFallback';
 import type {
   AdminOverviewPayload,
   AdminUserDetail,
@@ -56,6 +57,11 @@ async function requestJson<T>(
   tokenOverride?: string | null
 ): Promise<T> {
   const token = tokenOverride !== undefined ? tokenOverride : getStoredToken();
+
+  if (token?.startsWith('local_')) {
+    return handleLocalApi<T>(url, options, token);
+  }
+
   const headers: Record<string, string> = {
     'Content-Type': 'application/json',
     ...(options.headers as Record<string, string> | undefined),
@@ -64,10 +70,20 @@ async function requestJson<T>(
     headers.Authorization = `Bearer ${token}`;
   }
 
-  const res = await fetch(url, {
-    ...options,
-    headers,
-  });
+  let res: Response;
+  try {
+    res = await fetch(url, {
+      ...options,
+      headers,
+    });
+  } catch {
+    return handleLocalApi<T>(url, options, token);
+  }
+
+  const contentType = res.headers.get('content-type') || '';
+  if (!contentType.includes('application/json')) {
+    return handleLocalApi<T>(url, options, token);
+  }
 
   const data = (await res.json().catch(() => ({}))) as T & { error?: string };
   if (!res.ok) {

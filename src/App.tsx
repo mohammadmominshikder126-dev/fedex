@@ -40,6 +40,7 @@ import {
   submitRecharge,
   submitWithdrawal,
 } from './lib/api';
+import { DEFAULT_PLANS, DEFAULT_SITE_CONFIG } from './lib/localFallback';
 import type {
   DashboardPayload,
   InvestmentPlan,
@@ -62,25 +63,6 @@ const EMPTY_TEAM = {
   teamAssets: 0,
   teamNumber: 0,
   levels: { 1: [], 2: [], 3: [] },
-};
-
-const DEFAULT_SITE_CONFIG: SiteConfig = {
-  telegramLink: 'https://t.me/FeedexDigitalOfficial',
-  supportLink: 'https://t.me/FeedexDigitalSupport',
-  rechargeNumbers: {
-    বিকাশ: '01700-000001',
-    নগদ: '01800-000002',
-    রকেট: '01900-000003',
-  },
-  referralRates: {
-    level1: 15,
-    level2: 5,
-    level3: 2,
-  },
-  registrationBonus: 150,
-  minDeposit: 300,
-  minWithdraw: 200,
-  autoApproveDeposit: true,
 };
 
 const PAGE_TITLES: Record<RouteView, string> = {
@@ -115,7 +97,7 @@ export default function App() {
   const [view, setView] = useState<RouteView>(initialRef ? 'auth' : 'home');
   const [previousView, setPreviousView] = useState<RouteView>('home');
   const [mySubView, setMySubView] = useState<MySubView>('overview');
-  const [plans, setPlans] = useState<InvestmentPlan[]>([]);
+  const [plans, setPlans] = useState<InvestmentPlan[]>(DEFAULT_PLANS);
   const [siteConfig, setSiteConfig] = useState<SiteConfig>(DEFAULT_SITE_CONFIG);
   const [dashboard, setDashboard] = useState<DashboardPayload | null>(null);
   const [booting, setBooting] = useState(true);
@@ -125,11 +107,11 @@ export default function App() {
 
   const refreshPublicConfig = useCallback(async () => {
     try {
-      const { plans: fetchedPlans, config } = await fetchPlansAndConfig();
-      setPlans(fetchedPlans);
-      setSiteConfig(config);
+      const data = await fetchPlansAndConfig();
+      if (Array.isArray(data?.plans)) setPlans(data.plans);
+      if (data?.config?.rechargeNumbers) setSiteConfig(data.config);
     } catch {
-      // Plans load failure handled gracefully
+      // Keep default plans/config
     }
   }, []);
 
@@ -147,13 +129,13 @@ export default function App() {
     let active = true;
     async function init() {
       try {
-        const { plans: fetchedPlans, config } = await fetchPlansAndConfig();
+        const data = await fetchPlansAndConfig();
         if (active) {
-          setPlans(fetchedPlans);
-          setSiteConfig(config);
+          if (Array.isArray(data?.plans)) setPlans(data.plans);
+          if (data?.config?.rechargeNumbers) setSiteConfig(data.config);
         }
       } catch {
-        // Plans load failure handled gracefully
+        // Keep default plans/config
       }
 
       if (getStoredToken()) {
