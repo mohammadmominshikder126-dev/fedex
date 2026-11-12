@@ -1,0 +1,249 @@
+{
+  "version": 3,
+  "config": {
+    "telegramLink": "https://t.me/FeedexDigitalOfficial",
+    "supportLink": "https://t.me/FeedexDigitalSupport",
+    "rechargeNumbers": {
+      "বিকাশ": "01700001122",
+      "নগদ": "01800003344",
+      "রকেট": "01900005566"
+    },
+    "referralRates": {
+      "level1": 12,
+      "level2": 5,
+      "level3": 2
+    },
+    "registrationBonus": 150,
+    "minDeposit": 300,
+    "minWithdraw": 100,
+    "autoApproveDeposit": true
+  },
+  "plans": [
+    {
+      "id": "vip-1",
+      "code": "ভিআইপি ১",
+      "name": "ভিআইপি ১ — এয়ার কার্গো স্টার্টার",
+      "category": "daily",
+      "price": 500,
+      "dailyIncome": 50,
+      "cycleDays": 30,
+      "totalReturn": 1500,
+      "imagePath": "/assets/aistudio/images__26__5ccb2af9.jpeg"
+    },
+    {
+      "id": "vip-2",
+      "code": "ভিআইপি ২",
+      "name": "ভিআইপি ২ — এক্সপ্রেস ফ্লিট",
+      "category": "daily",
+      "price": 1000,
+      "dailyIncome": 110,
+      "cycleDays": 30,
+      "totalReturn": 3300,
+      "imagePath": "/assets/aistudio/80825423_605f44ca.jpg"
+    },
+    {
+      "id": "vip-3",
+      "code": "ভিআইপি ৩",
+      "name": "ভিআইপি ৩ — ইন্টারন্যাশনাল এয়ারলাইন",
+      "category": "daily",
+      "price": 2000,
+      "dailyIncome": 230,
+      "cycleDays": 30,
+      "totalReturn": 6900,
+      "imagePath": "/assets/aistudio/e4cf2de03ad051bc28ff33864f809d51_cd43a73c.jpg"
+    },
+    {
+      "id": "vip-4",
+      "code": "ভিআইপি ৪",
+      "name": "ভিআইপি ৪ — গ্লোবাল হাব পার্টনার",
+      "category": "daily",
+      "price": 5000,
+      "dailyIncome": 600,
+      "cycleDays": 30,
+      "totalReturn": 18000,
+      "imagePath": "/assets/aistudio/images__9__13d6c096.jpeg"
+    },
+    {
+      "id": "vip-5",
+      "code": "ভিআইপি ৫",
+      "name": "ভিআইপি ৫ — প্রাইম লজিস্টিকস",
+      "category": "daily",
+      "price": 10000,
+      "dailyIncome": 1250,
+      "cycleDays": 30,
+      "totalReturn": 37500,
+      "imagePath": "/assets/aistudio/images__8__66bd7665.jpeg"
+    },
+    {
+      "id": "vip-6",
+      "code": "ভিআইপি ৬",
+      "name": "ভিআইপি ৬ — এক্সিকিউটিভ ফ্রেইট",
+      "category": "daily",
+      "price": 25000,
+      "dailyIncome": 3300,
+      "cycleDays": 30,
+      "totalReturn": 99000,
+      "imagePath": "/assets/aistudio/e4cf2de03ad051bc28ff33864f809d51_cd43a73c.jpg"
+    },
+    {
+      "id": "welfare-1",
+      "code": "কল্যাণ ১",
+      "name": "কল্যাণ প্ল্যান ক",
+      "category": "welfare",
+      "price": 300,
+      "dailyIncome": 75,
+      "cycleDays": 7,
+      "totalReturn": 525,
+      "imagePath": "/assets/aistudio/images__8__66bd7665.jpeg"
+    },
+    {
+      "id": "welfare-2",
+      "code": "কল্যাণ ২",
+      "name": "কল্যাণ প্ল্যান খ",
+      "category": "welfare",
+      "price": 1200,
+      "dailyIncome": 280,
+      "cycleDays": 10,
+      "totalReturn": 2800,
+      "imagePath": "/assets/aistudio/images__9__13d6c096.jpeg"
+    },
+    {
+      "id": "welfare-3",
+      "code": "কল্যাণ ৩",
+      "name": "কল্যাণ প্ল্যান গ",
+      "category": "welfare",
+      "price": 3500,
+      "dailyIncome": 750,
+      "cycleDays": 15,
+      "totalReturn": 11250,
+      "imagePath": "/assets/aistudio/80825423_605f44ca.jpg"
+    }
+  ],
+  "adminPasswordHash": "c1e0cfcc04bc941fd03cf8cbc75a4e60:0793325e37b82e55570a1ee964f27dd34d729f9c0b67af43d6930d501aeb112ed76a1ccd2bcd8724a424bdeb557721df08ae72a8bb2842b0e6d95705386bc555",
+  "users": [
+    {
+      "id": "usr_demo_041731786",
+      "memberId": "041731786",
+      "phone": "01712345678",
+      "passwordHash": "e72478c4d30918fdb002d047dc596fd9:3362cab85b48cda03ae3864930c962c706dfaa7c8b362aad8aeac969e9920862e35162b840f418bd02de4f81ad26ce532a619cfa8acfbc2c3b077e3b1e274050",
+      "withdrawPasswordHash": "5a0934de96baba3f74616f8b6237c55f:e395ff7af1bb4a465b7f215977548e3d1a16ac0830e4cdbe0858645f99f1390e5e8895577267af8ef0463d1d9e1687c7c668ea29a0efaf1ce17dc44ec8e8dade",
+      "inviteCode": "FDX731786",
+      "referredBy": null,
+      "balance": 150,
+      "totalRecharge": 0,
+      "totalWithdrawal": 0,
+      "lastSpinDate": null,
+      "blocked": false,
+      "bankBinding": null,
+      "createdAt": "2026-11-12T20:35:48.363Z"
+    },
+    {
+      "id": "usr_ref_l1_001",
+      "memberId": "041882104",
+      "phone": "01811223344",
+      "passwordHash": "b48c5d95cbcefa039ab2238569df8635:ae3dea8ca16e3a63e8f3da87d8b5e8f68753b4163fac83d003a27b5bede4271b727be585e3cbd0ccb12dcae80a6034b52e26ab4e34a535dabe1836dc99a8e77d",
+      "withdrawPasswordHash": "05b7bda92a6f90570685619f0387f3b5:254783c8c7829c740ec615be0ae4cf5508158aede5eb8c299cccd9620deebe9f72eafb67722e9fd4bbda9ccff4cbc4af90200c94fe665a5d501ec5150370ffb9",
+      "inviteCode": "FDX882104",
+      "referredBy": "usr_demo_041731786",
+      "balance": 350,
+      "totalRecharge": 500,
+      "totalWithdrawal": 0,
+      "lastSpinDate": null,
+      "blocked": false,
+      "bankBinding": null,
+      "createdAt": "2026-11-12T20:35:48.363Z"
+    },
+    {
+      "id": "usr_ref_l2_002",
+      "memberId": "041995312",
+      "phone": "01922334455",
+      "passwordHash": "d1ee60ec8c4d25aed4576aafd76f1f53:2c5e2dfff5b21f95062dc1d4b19b5994e7d3972cb093c204aa01faf20bdf072c1feb20c8063b679c009a2197ecfb3272ffa0b714668585c1ef1b76c09d823d97",
+      "withdrawPasswordHash": "824cd55b5c43de5350c9b21a49a86585:e006fb8ae98363f3cce6c75fda5069bf6b8226b588ad27affcfe542358450b241ab064555fc876efc4f305bef136d42b36e01d31af2877f4cd21230ced232ef6",
+      "inviteCode": "FDX995312",
+      "referredBy": "usr_ref_l1_001",
+      "balance": 600,
+      "totalRecharge": 1000,
+      "totalWithdrawal": 0,
+      "lastSpinDate": null,
+      "blocked": false,
+      "bankBinding": null,
+      "createdAt": "2026-11-12T20:35:48.363Z"
+    },
+    {
+      "id": "usr_ref_l3_003",
+      "memberId": "042104578",
+      "phone": "01633445566",
+      "passwordHash": "c0abd053586f8dfcd7bb7ee7320c92cb:0f1db1d24fde335b1ef1ee07b57dda48ed9831b3948d5d687859be3fa94a41498c42537dc60820c8c7d92fbcecb50cdcf21fa430618e7c7384303d5028c23d73",
+      "withdrawPasswordHash": "622c0f26992d31572037509e543fa9bc:c9c44c334718915f3160b632c2ebda35d7b0a37caf3bdf035adc2f369f2d475f377cff234af0c6124764e819a4e2938c85197ddaed63769ccdd7d1bbd7128f71",
+      "inviteCode": "FDX104578",
+      "referredBy": "usr_ref_l2_002",
+      "balance": 250,
+      "totalRecharge": 500,
+      "totalWithdrawal": 0,
+      "lastSpinDate": null,
+      "blocked": false,
+      "bankBinding": null,
+      "createdAt": "2026-11-12T20:35:48.363Z"
+    }
+  ],
+  "products": [
+    {
+      "id": "prd_seed_l1",
+      "userId": "usr_ref_l1_001",
+      "planId": "vip-1",
+      "planName": "ভিআইপি ১ — এয়ার কার্গো স্টার্টার",
+      "category": "daily",
+      "price": 500,
+      "dailyIncome": 50,
+      "cycleDays": 30,
+      "claimedDays": 1,
+      "totalEarned": 50,
+      "purchasedAt": "2026-11-12T20:35:48.363Z",
+      "lastClaimedAt": "2026-11-12T20:35:48.363Z",
+      "status": "সক্রিয়"
+    },
+    {
+      "id": "prd_seed_l2",
+      "userId": "usr_ref_l2_002",
+      "planId": "vip-2",
+      "planName": "ভিআইপি ২ — এক্সপ্রেস ফ্লিট",
+      "category": "daily",
+      "price": 1000,
+      "dailyIncome": 110,
+      "cycleDays": 30,
+      "claimedDays": 1,
+      "totalEarned": 110,
+      "purchasedAt": "2026-11-12T20:35:48.363Z",
+      "lastClaimedAt": "2026-11-12T20:35:48.363Z",
+      "status": "সক্রিয়"
+    },
+    {
+      "id": "prd_seed_l3",
+      "userId": "usr_ref_l3_003",
+      "planId": "vip-1",
+      "planName": "ভিআইপি ১ — এয়ার কার্গো স্টার্টার",
+      "category": "daily",
+      "price": 500,
+      "dailyIncome": 50,
+      "cycleDays": 30,
+      "claimedDays": 1,
+      "totalEarned": 50,
+      "purchasedAt": "2026-11-12T20:35:48.363Z",
+      "lastClaimedAt": "2026-11-12T20:35:48.363Z",
+      "status": "সক্রিয়"
+    }
+  ],
+  "records": [
+    {
+      "id": "rec_welcome_demo",
+      "userId": "usr_demo_041731786",
+      "type": "bonus",
+      "title": "নতুন নিবন্ধন বোনাস",
+      "amount": 150,
+      "direction": "credit",
+      "status": "সম্পন্ন",
+      "reference": "WELCOME-150",
+      "createdAt": "2026-11-12T20:35:48.363Z"
+    }
+  ]
+}
